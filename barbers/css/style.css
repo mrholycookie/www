@@ -17,7 +17,7 @@ a {
 }
 header {
 	margin-top: 10px;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 header img {
 	float: left;
@@ -28,16 +28,23 @@ header ul{
 header ul li {
 	display: inline-block;
 	margin-left: 50px;
-	line-height: 100px;
+	line-height: 70px;
 }
-.item-main {
+.block {
 	background-color: #fff;
 	-moz-box-sizing: border-box; /* Для Firefox */  
     box-sizing: border-box; /* Ширина блока с полями */
-    box-shadow: 0 1px 0 0 #e1e8ed, 0 0 0 1px #e9eef2;
     padding: 10px;
-	width: 600px;
+    box-shadow: 0 1px 0 0 #e1e8ed, 0 0 0 1px #e9eef2;
+    height: 410px;
+}
+.item-main {
+    padding: 10px;
+	width: 660px;
 	float: left;	
+}
+.item-main p {
+	text-align: justify;
 }
 .items-topten {
 	margin-top: 10px;
@@ -45,41 +52,62 @@ header ul li {
 .item-topten {
 	margin-bottom: 10px;
 }
-
 .top-main {
-	background-color: #fff;
-	-moz-box-sizing: border-box; /* Для Firefox */  
-    box-sizing: border-box; /* Ширина блока с полями */
-    padding: 10px;
-    box-shadow: 0 1px 0 0 #e1e8ed, 0 0 0 1px #e9eef2;
-	width: 420px;
+	width: 300px;
 	float: right;
 }
 /*===== slider =====*/
-#slider {
-	position: relative; 
+.slider {
+	margin-top: 20px; 
+	margin-bottom: 20px;
 }
-#slider .item{
+.slider .item{
   margin: 3px;
 }
-#slider .item img{
+.slider .item img{
   display: block;
   width: 100%;
   height: auto;
 }
-
+.wanttorate {
+	text-align: center;
+}
 a.main-button {
-  display: inline-block;
-  color: red;
-  font-weight: 700;
-  text-decoration: none;
-  user-select: none;
-  padding: .5em 2em;
-  outline: none;
-  border: 1px solid;
-  border-radius: 1px;
-  transition: 0.2s;
+  color: #fff; /* цвет текста */
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  user-select: none; /* убирать выделение текста */
+  background: rgb(212,75,56); /* фон кнопки */
+  padding: .7em 1.5em; /* отступ от текста */
+  outline: none; /* убирать контур в Mozilla */
+  margin-bottom: 30px;
 } 
-a.main-button:hover { background: #e2e2e2; }
-a.main-button:active { background: red; }
+a.main-button:hover { background: rgb(232,95,76); } /* при наведении курсора мышки */
+a.main-button:active { background: rgb(152,15,0); } /* при нажатии */
 
+
+.items-footer {
+ width: 500px;
+ height: 300px;
+ float: left;
+ margin-left: 12px;
+ margin-top: 20px;
+ margin-bottom: 20px;
+}
+.items-footer h3 {
+	text-align: center;
+	text-transform: uppercase;
+}
+.item-footer {
+    padding: 10px;
+	width: 500px;
+	float: left;	
+}
+.item-main p {
+	text-align: justify;
+}
+footer {
+	text-align: center;
+	-moz-box-sizing: border-box; /* Для Firefox */  
+    box-sizing: border-box; /* Ширина блока с полями */
+    padding: 10px;
+}
