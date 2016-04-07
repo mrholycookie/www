@@ -12,6 +12,12 @@ a {
 	text-decoration: none;
 	color: black;
 }
+hr {
+    border: none; /* Убираем границу */
+    background-color: rgb(232,95,76); /* Цвет линии */
+    color: rgb(232,95,76); /* Цвет линии для IE6-7 */
+    height: 1px; /* Толщина линии */
+}
 .container {
 	width: 1024px;
 	margin: 0 auto;
@@ -58,6 +64,7 @@ header a:hover {
 	margin-top: 10px;
 }
 .item-topten {
+	margin-top: 10px;
 	margin-bottom: 10px;
 }
 .top-main {
@@ -104,6 +111,9 @@ a.main-button:active { background: rgb(152,15,0); } /* при нажатии */
 .items-footer h3 {
 	text-align: center;
 	text-transform: uppercase;
+}
+.items-footer img {
+	margin: 1px;
 }
 .item-footer {
     padding: 10px;
