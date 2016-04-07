@@ -6,6 +6,7 @@
 body {
 	font-family: 'PT Sans Caption', sans-serif;
 	font-size: 16px;
+	background-color: #f0f2f5;
 }
 a {
 	text-decoration: none;
@@ -30,7 +31,12 @@ header ul li {
 	line-height: 100px;
 }
 .item-main {
-	width: 500px;
+	background-color: #fff;
+	-moz-box-sizing: border-box; /* Для Firefox */  
+    box-sizing: border-box; /* Ширина блока с полями */
+    box-shadow: 0 1px 0 0 #e1e8ed, 0 0 0 1px #e9eef2;
+    padding: 10px;
+	width: 600px;
 	float: left;	
 }
 .items-topten {
@@ -41,12 +47,17 @@ header ul li {
 }
 
 .top-main {
-	width: 400px;
+	background-color: #fff;
+	-moz-box-sizing: border-box; /* Для Firefox */  
+    box-sizing: border-box; /* Ширина блока с полями */
+    padding: 10px;
+    box-shadow: 0 1px 0 0 #e1e8ed, 0 0 0 1px #e9eef2;
+	width: 420px;
 	float: right;
 }
 /*===== slider =====*/
 #slider {
-	margin-bottom: 50px; 
+	position: relative; 
 }
 #slider .item{
   margin: 3px;
@@ -56,4 +67,19 @@ header ul li {
   width: 100%;
   height: auto;
 }
+
+a.main-button {
+  display: inline-block;
+  color: red;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  padding: .5em 2em;
+  outline: none;
+  border: 1px solid;
+  border-radius: 1px;
+  transition: 0.2s;
+} 
+a.main-button:hover { background: #e2e2e2; }
+a.main-button:active { background: red; }
 
