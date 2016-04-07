@@ -1,0 +1,54 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+body {
+	font-family: 'PT Sans Caption', sans-serif;
+	font-size: 16px;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	width: 1024px;
+	margin: 0 auto;
+}
+header {
+	margin-top: 10px;
+	margin-bottom: 50px;
+}
+header img {
+	float: left;
+}
+header ul{
+	list-style: none;
+}
+header ul li {
+	display: inline-block;
+	margin-left: 50px;
+	line-height: 100px;
+}
+.item-main {
+	width: 500px;
+	float: left;
+	
+}
+
+.top-main {
+	width: 400px;
+	float: right;
+}
+/*===== slider =====*/
+#slider {
+	margin-bottom: 50px; 
+}
+#slider .item{
+  margin: 3px;
+}
+#slider .item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
