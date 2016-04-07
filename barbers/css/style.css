@@ -31,8 +31,13 @@ header ul li {
 }
 .item-main {
 	width: 500px;
-	float: left;
-	
+	float: left;	
+}
+.items-topten {
+	margin-top: 10px;
+}
+.item-topten {
+	margin-bottom: 10px;
 }
 
 .top-main {
