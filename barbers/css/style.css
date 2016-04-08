@@ -102,7 +102,7 @@ a.main-button:active { background: rgb(152,15,0); } /* при нажатии */
 
 .items-footer {
  width: 500px;
- height: 300px;
+ height: 200px;
  float: left;
  margin-left: 12px;
  margin-top: 20px;
@@ -113,12 +113,16 @@ a.main-button:active { background: rgb(152,15,0); } /* при нажатии */
 	text-transform: uppercase;
 }
 .items-footer img {
-	margin: 1px;
+	margin: 18px;
 }
 .item-footer {
     padding: 10px;
 	width: 500px;
 	float: left;	
+}
+.items-footer ul li {
+	list-style: none;
+	margin-top: 10px;
 }
 .item-main p {
 	text-align: justify;
