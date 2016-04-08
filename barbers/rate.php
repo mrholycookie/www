@@ -49,7 +49,7 @@
         <?php 
     include "connect_bd.php";
 
-    $result = mysql_query(" SELECT * FROM barbersshops ");
+    $result = mysql_query(" SELECT * FROM barbersshops ORDER by rate DESC");
 
     while ($row = mysql_fetch_array($result))
 {?>
