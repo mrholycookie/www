@@ -47,6 +47,7 @@
 		</thead>
 		<tbody>
         <?php 
+        $i=1;
     include "connect_bd.php";
 
     $result = mysql_query(" SELECT * FROM barbersshops ORDER by rate DESC");
@@ -54,7 +55,7 @@
     while ($row = mysql_fetch_array($result))
 {?>
 		<tr>
-		<td class="rate-place"><?php echo $row['id'] ?></td>
+		<td class="rate-place"><?php echo $i++ ?></td>
 		<td class="rate-name"><?php echo $row['name'] ?></td>
 		<td class="rate-town"><?php echo $row['city'] ?></td>
 		<td class="rate-stars"><?php echo $row['rate'] ?></td>
