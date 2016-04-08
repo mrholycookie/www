@@ -162,10 +162,6 @@ footer {
 }
 
 
-
-
-
-
 /* наша HTML таблица */
 table.sort{
 border-spacing:0.1em;
@@ -192,4 +188,30 @@ vertical-align:middle
 table.sort thead td.curcol{
 background-color:#999999;
 color:#FFFFFF
+}
+
+
+
+
+.single-barber {
+	width: 320px;
+}
+.single-barber-description {
+	width: 650px;
+}
+.single-barber-description p {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.single-barber-description-full {
+	margin-top: 20px;
+	height: auto;
+}
+.single-barber-description-full h3 {
+	text-align: center;
+	text-transform: uppercase;
+}
+.single-barber-description-full p {
+	text-align: justify;
+	margin-top: 10px;
 }
