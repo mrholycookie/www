@@ -16,7 +16,6 @@
 	<link rel="stylesheet" href="css/owl.transitions.css">
 	<link rel="shortcut icon" href="favicon.png" />
 	<link rel="stylesheet" href="css/style.css" />
-	<script src="js/dropdown.js"></script>
 </head>
 <body>
 
@@ -33,35 +32,7 @@
 	</ul>
 </header>
 
-<article>
-	<div class="block">
-        <div class="item-main single-barber">
-            <img src="http://placehold.it/300x300">
-        </div>
-        <div class="top-main single-barber-description">
-            <div class="items-topten">
-            <h3>Констонтинопольская</h3>
-            <hr>
-                <p>Город:</p>
-                <p>Официальный сайт:</p>
-                <p>Телфон:</p>
-                <p>Оценка:</p>
-
-                <img src="http://placehold.it/500x200">
-            </div>
-        </div>
-    </div>
-
-    <div class="block single-barber-description-full">
-        <h3>Описание</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-</article>
+<?php include($_SERVER['DOCUMENT_ROOT'].'views/pages/'.$view.'.php'); ?>
 
 <footer>
 	<p>&copy;2016 bshunter.ru - все барбершопы России. Рейтинг барбершопов!</p> 	
@@ -70,7 +41,6 @@
 
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/owl.carousel.js"></script>
-</script>
 <script>
 $(document).ready(function() {
  
