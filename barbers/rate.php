@@ -46,18 +46,20 @@
 		</tr>
 		</thead>
 		<tbody>
+        <?php 
+    include "connect_bd.php";
+
+    $result = mysql_query(" SELECT * FROM barbersshops ");
+
+    while ($row = mysql_fetch_array($result))
+{?>
 		<tr>
-		<td class="rate-place">3</td>
-		<td class="rate-name">Название</td>
-		<td class="rate-town">Город</td>
-		<td class="rate-stars">Оценка</td>
+		<td class="rate-place"><?php echo $row['id'] ?></td>
+		<td class="rate-name"><?php echo $row['name'] ?></td>
+		<td class="rate-town"><?php echo $row['city'] ?></td>
+		<td class="rate-stars"><?php echo $row['rate'] ?></td>
 		</tr>
-		<tr>
-		<td class="rate-place">2</td>
-		<td class="rate-name">Название</td>
-		<td class="rate-town">Город</td>
-		<td class="rate-stars">Оценка</td>
-		</tr>
+<?php } ?>
 		</tbody>
 	</table>
 	</div>
