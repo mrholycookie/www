@@ -1,6 +1,7 @@
 <?php 
 	
 include ('db_connect.php');
+include ('db_functions.php');
 
 $view = empty($_GET["view"]) ? "index" : $_GET["view"];
 

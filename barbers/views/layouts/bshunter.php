@@ -17,8 +17,8 @@
 	<link rel="shortcut icon" href="favicon.png" />
 	<link rel="stylesheet" href="css/style.css" />
 	<script type="text/javascript" language="javascript" src="js/behavior.js"></script>
-<script type="text/javascript" language="javascript" src="js/rating.js"></script>
-<link rel="stylesheet" type="text/css" href="css/rating.css" />
+	<script type="text/javascript" language="javascript" src="js/rating.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/rating.css" />
 </head>
 <body>
 

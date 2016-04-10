@@ -1,4 +1,8 @@
-<?php require('_drawrating.php'); ?>
+<?php 
+$id = $_GET['id'];
+$bshunt = get_item($id);
+include ('_drawrating.php');
+?>
 <article>
 	<div class="block">
         <div class="item-main single-barber">
@@ -8,7 +12,7 @@
             <div class="items-topten">
             <h3>Констонтинопольская</h3>
             <hr>
-                <p>Город:</p>
+                <p>Город:<?php echo $bshunt['name'] ?></p>
                 <p>Официальный сайт:</p>
                 <p>Телфон:</p>
                 <p>Оценка:</p>

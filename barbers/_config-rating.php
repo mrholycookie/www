@@ -14,10 +14,10 @@ See readme.txt for full credit details.
 
 	//Connect to  your rating database
 	$rating_dbhost        = 'localhost';
-	$rating_dbuser        = '';
-	$rating_dbpass        = '';
-	$rating_dbname        = '';
-	$rating_tableName     = '';
+	$rating_dbuser        = 'host1233889_barb';
+	$rating_dbpass        = 'cobbob1230Stm';
+	$rating_dbname        = 'host1233889_bs';
+	$rating_tableName     = 'rating';
 	$rating_path_db       = ''; // the path to your db.php file (not used yet!)
 	$rating_path_rpc      = ''; // the path to your rpc.php file (not used yet!)
 	

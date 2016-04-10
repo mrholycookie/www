@@ -13,15 +13,14 @@
 		<tbody>
         <?php 
         $i=1;
-
-    include 'db_functions.php';
+   
     $result = mysql_query(" SELECT * FROM barbersshops ORDER by rate DESC");
 
     while ($row = mysql_fetch_array($result))
 {?>
 		<tr>
 		<td class="rate-place"><?php echo $i++ ?></td>
-		<td class="rate-name"><a href="#"><?php echo $row['name'] ?></a></td>
+		<td class="rate-name"><a href="index.php?view=item&id=<?php echo $row['id'] ?>"><?php echo $row['name'] ?></a></td>
 		<td class="rate-town"><?php echo $row['city'] ?></td>
 		<td class="rate-stars"><?php echo $row['rate'] ?></td>
 		</tr>
