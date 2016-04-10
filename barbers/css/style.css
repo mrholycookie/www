@@ -114,6 +114,8 @@ a.main-button:active { background: rgb(152,15,0); } /* при нажатии */
 }
 .items-footer img {
 	margin: 18px;
+	border-radius: 100px; /* Радиус скругления */
+    box-shadow: 0 0 0 3px #d44b38, 0 0 13px #d44b38; /* Параметры теней */
 }
 .item-footer {
     padding: 10px;

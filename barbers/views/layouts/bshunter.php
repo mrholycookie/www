@@ -24,15 +24,15 @@
 <header>
 	<img src="images/logo.png">
 	<ul>
-		<li><a href="#">Главная</a></li>
-		<li><a href="#">Рейтинг</a></li>
-		<li><a href="#">Обзоры</a></li>
-		<li><a href="#">Статьи</a></li>
-		<li><a href="#">Контакты</a></li>
+		<li><a href="index.php">Главная</a></li>
+		<li><a href="?view=rate">Рейтинг</a></li>
+		<li><a href="?view=reviews">Обзоры</a></li>
+		<li><a href="?view=articles">Статьи</a></li>
+		<li><a href="?view=contacts">Контакты</a></li>
 	</ul>
 </header>
 
-<?php include($_SERVER['DOCUMENT_ROOT'].'views/pages/'.$view.'.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/views/pages/'.$view.'.php'); ?>
 
 <footer>
 	<p>&copy;2016 bshunter.ru - все барбершопы России. Рейтинг барбершопов!</p> 	

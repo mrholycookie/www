@@ -10,31 +10,19 @@
 			<div class="items-topten">
 			<h3>ТОП-5 Барбершопов</h3>
 			<hr>
+			<?php 
+
+			include 'db_connect.php';
+
+			$result = mysql_query(" SELECT * FROM barbersshops ORDER by rate DESC LIMIT 5");
+			while ($row = mysql_fetch_array($result))
+			{?>
 				<div class="item-topten">
-					<h4>Констонтинопольская</h4>
-					<p>Санкт-Петерубрг</p>
-					<p>Оценка:</p>
+					<h4><?php echo $row['name'] ?></h4>
+					<p>Город:<?php echo $row['city'] ?></p>
+					<p>Оценка:<?php echo $row['rate'] ?></p>
 				</div>
-				<div class="item-topten">
-					<h4>Констонтинопольская</h4>
-					<p>Санкт-Петерубрг</p>
-					<p>Оценка:</p>
-				</div>
-				<div class="item-topten">
-					<h4>Констонтинопольская</h4>
-					<p>Санкт-Петерубрг</p>
-					<p>Оценка:</p>
-				</div>
-				<div class="item-topten">
-					<h4>Констонтинопольская</h4>
-					<p>Санкт-Петерубрг</p>
-					<p>Оценка:</p>
-				</div>
-				<div class="item-topten">
-					<h4>Констонтинопольская</h4>
-					<p>Санкт-Петерубрг</p>
-					<p>Оценка:</p>
-				</div>
+			<?php } ?>
 			</div>
 		</div>
 	</div>
@@ -68,7 +56,7 @@
 		<img src="http://placehold.it/120x120">
 	</div>
 	<div class="block items-footer">
-		<h3>Недавно добавились</h3>
+		<h3>Новости</h3>
 		<ul>
 			<li>Добавили новую возможность сделать мир ярче и интереснее!</li>
 			<li>Все лучшее в одном месте!</li>
