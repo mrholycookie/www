@@ -1,3 +1,4 @@
+<?php require('_drawrating.php'); ?>
 <article>
 	<div class="block">
         <div class="item-main single-barber">
@@ -11,6 +12,7 @@
                 <p>Официальный сайт:</p>
                 <p>Телфон:</p>
                 <p>Оценка:</p>
+                <p>Проголосовать: <?php echo rating_bar('1'); ?></p>
 
                 <img src="http://placehold.it/500x200">
             </div>
