@@ -7,10 +7,12 @@
 <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
-	<title>Заголовок</title>
-	<meta name="description" content="" />
+	<title>Рейтинг Барбрершопов</title>
+	<meta name="keywords" content="Барбершоп, barber, barbershop, отзывы Барбершоп, лучший барбрешоп, Барбер" />
+	<meta name="description" content="Все Барбрешопы России. Рейтирнг Барбершопов!" />
 	<meta name="viewport" content="width=1024">
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/owl.theme.css">
 	<link rel="stylesheet" href="css/owl.transitions.css">
@@ -25,12 +27,12 @@
 <div class="container">
 		
 <header>
-	<img src="images/logo.png">
+	<a href="index.php"><img src="images/logo.png"></a>
 	<ul>
 		<li><a href="index.php">Главная</a></li>
 		<li><a href="?view=rate">Рейтинг</a></li>
-		<li><a href="?view=reviews">Обзоры</a></li>
-		<li><a href="?view=articles">Статьи</a></li>
+<!-- 		<li><a href="?view=reviews">Обзоры</a></li>
+		<li><a href="?view=articles">Статьи</a></li> -->
 		<li><a href="?view=contacts">Контакты</a></li>
 	</ul>
 </header>

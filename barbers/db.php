@@ -38,7 +38,6 @@ $tense = ($count==1) ? "vote" : "votes"; //plural form votes/vote
 // checking to see if the first vote has been tallied
 // or increment the current number of votes
 ($sum==0 ? $added=0 : $added=$count+1);
-
 // if it is an array i.e. already has entries the push in another value
 ((is_array($checkIP)) ? array_push($checkIP,$ip_num) : $checkIP=array($ip_num));
 $insertip=serialize($checkIP);
@@ -47,9 +46,9 @@ $insertip=serialize($checkIP);
 $voted=mysql_num_rows(mysql_query("SELECT used_ips FROM $rating_dbname.$rating_tableName WHERE used_ips LIKE '%".$ip."%' AND id='".$id_sent."' "));
 if(!$voted) {     //if the user hasn't yet voted, then vote normally...
 
-
+$full = $sum/$added;
 if (($vote_sent >= 1 && $vote_sent <= $units) && ($ip == $ip_num)) { // keep votes within range
-	$update = "UPDATE $rating_dbname.$rating_tableName SET total_votes='".$added."', total_value='".$sum."', used_ips='".$insertip."' WHERE id='$id_sent'";
+	$update = "UPDATE $rating_dbname.$rating_tableName SET total_votes='".$added."', total_value='".$sum."', used_ips='".$insertip."', full='".$full."' WHERE id='$id_sent'";
 	$result = mysql_query($update);		
 } 
 header("Location: $referer"); // go back to the page we came from 

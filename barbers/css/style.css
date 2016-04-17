@@ -4,14 +4,18 @@
 	text-decoration: none;
 }
 body {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	background-color: #f0f2f5;
 }
 a {
-	text-decoration: none;
+	text-decoration: underline;
 	color: black;
+
+
 }
+a:hover { color: rgb(232,95,76); } /* при наведении курсора мышки */
+a:active { color: rgb(152,15,0); } /* при нажатии */
 hr {
     border: none; /* Убираем границу */
     background-color: rgb(232,95,76); /* Цвет линии */
@@ -19,11 +23,12 @@ hr {
     height: 1px; /* Толщина линии */
 }
 .container {
+	background-color: #fff;
 	width: 1024px;
 	margin: 0 auto;
 }
 header {
-	margin-top: 10px;
+	padding-top: 10px;
 	margin-bottom: 20px;
 }
 header img {
@@ -38,6 +43,8 @@ header ul li {
 	line-height: 70px;
 }
 header a {
+	text-transform: uppercase;
+	text-decoration: none;
 	font-weight: 700;
 	font-size: 17px;
 }
@@ -45,35 +52,31 @@ header a:hover {
 	color: #d95c5c;
 }
 .block {
-	background-color: #fff;
 	-moz-box-sizing: border-box; /* Для Firefox */  
     box-sizing: border-box; /* Ширина блока с полями */
     padding: 10px;
-    box-shadow: 0 1px 0 0 #e1e8ed, 0 0 0 1px #e9eef2;
-    height: 430px;
 }
 .item-main {
-    padding: 10px;
 	width: 660px;
 	float: left;	
 }
 .item-main p {
 	text-align: justify;
 }
-.items-topten {
-	margin-top: 10px;
+.items-topten h3{
+	
 }
 .item-topten {
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin: 10px 0 10px 0;
+	text-align: center;
 }
 .top-main {
-	width: 300px;
+	width: 320px;
 	float: right;
 }
 /*===== slider =====*/
 .slider {
-	margin-top: 20px; 
+	margin-top: 430px; 
 	margin-bottom: 20px;
 }
 .slider .item{
@@ -86,6 +89,7 @@ header a:hover {
 }
 .wanttorate {
 	text-align: center;
+	margin-top: 30px;
 }
 a.main-button {
   color: #fff; /* цвет текста */
@@ -101,11 +105,9 @@ a.main-button:active { background: rgb(152,15,0); } /* при нажатии */
 
 
 .items-footer {
- width: 500px;
- height: 200px;
- float: left;
- margin-left: 12px;
- margin-top: 20px;
+
+
+ margin-top: 50px;
  margin-bottom: 20px;
 }
 .items-footer h3 {
@@ -113,7 +115,7 @@ a.main-button:active { background: rgb(152,15,0); } /* при нажатии */
 	text-transform: uppercase;
 }
 .items-footer img {
-	margin: 18px;
+	margin: 38px;
 	border-radius: 100px; /* Радиус скругления */
     box-shadow: 0 0 0 3px #d44b38, 0 0 13px #d44b38; /* Параметры теней */
 }
@@ -126,6 +128,23 @@ a.main-button:active { background: rgb(152,15,0); } /* при нажатии */
 	list-style: none;
 	margin-top: 10px;
 }
+.items-footer-img-disc {
+    display: inline-block; /* Строчно-блочный элемент */
+    position: relative; /* Относительное позиционирование */
+   }
+.items-footer-img-disc:hover::after {
+    content: attr(data-title); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; right: 0; bottom: 5px; /* Положение подсказки */
+    z-index: 1; /* Отображаем подсказку поверх других элементов */
+    background: #d44b38; /* Полупрозрачный цвет фона */
+    color: #fff; /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    font-size: 15px; /* Размер текста подсказки */
+    padding: 5px 10px; /* Поля */
+    border: 1px solid #333; /* Параметры рамки */
+   }
+
 .item-main p {
 	text-align: justify;
 }
@@ -163,6 +182,23 @@ footer {
 	width: 100px;
 }
 
+.addbarber {
+	background-color: #fff;
+	-moz-box-sizing: border-box; /* Для Firefox */  
+    box-sizing: border-box; /* Ширина блока с полями */
+    padding: 10px;
+    height: auto;
+}
+.addbarber h3 {
+	text-transform: uppercase;
+	text-align: center;
+}
+.addbarber p {
+	margin-top: 20px;
+}
+.addbarber ul {
+	margin-left: 20px;
+}
 
 /* наша HTML таблица */
 table.sort{
@@ -174,7 +210,8 @@ margin-top:1em
 /* ячейки таблицы */
 table.sort td{
 border:1px solid #CCCCCC;
-padding:0.3em 1em
+padding:0.3em 1em;
+height: 30px;
 }
 
 /* заголовки таблицы */
@@ -183,7 +220,7 @@ cursor:pointer;
 cursor:hand;
 font-weight:bold;
 text-align:center;
-vertical-align:middle
+vertical-align:middle;
 }
 
 /* заголовок отсортированного столбца */
@@ -194,7 +231,9 @@ color:#FFFFFF
 
 
 
-
+.single-barber-block {
+	height: 340px;
+}
 .single-barber {
 	width: 320px;
 }
@@ -202,7 +241,7 @@ color:#FFFFFF
 	width: 650px;
 }
 .single-barber-description p {
-	margin-top: 10px;
+	margin-top: 30px;
 	margin-bottom: 10px;
 }
 .single-barber-description-full {
@@ -217,3 +256,16 @@ color:#FFFFFF
 	text-align: justify;
 	margin-top: 10px;
 }
+.single-barber-description-rating {
+	float: right;
+	color: #fff;
+	font-size: 40px;
+	font-weight: 700;
+	height: 70px;
+	width: 70px;
+	background-color: #58FA82;
+	line-height: 70px;
+	text-align: center;
+	box-shadow: 0 1px 0 0 #e1e8ed, 0 0 0 1px #e9eef2;
+}
+

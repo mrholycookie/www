@@ -1,35 +1,31 @@
 <?php 
+include ('_drawrating.php');
 $id = $_GET['id'];
 $bshunt = get_item($id);
-include ('_drawrating.php');
 ?>
 <article>
-	<div class="block">
+    <div class="block single-barber-block">
         <div class="item-main single-barber">
-            <img src="http://placehold.it/300x300">
+            <img src="images/<?php echo $bshunt['image'] ?>" style="border:1px solid black;">
         </div>
         <div class="top-main single-barber-description">
             <div class="items-topten">
-            <h3>Констонтинопольская</h3>
-            <hr>
-                <p>Город:<?php echo $bshunt['name'] ?></p>
-                <p>Официальный сайт:</p>
-                <p>Телфон:</p>
-                <p>Оценка:</p>
-                <p>Проголосовать: <?php echo rating_bar('1'); ?></p>
-
-                <img src="http://placehold.it/500x200">
+                <span class="single-barber-description-rating"><?php echo rtrim(rtrim($bshunt['full'], '0'), '.'); ?></span>
+                <h3><?php echo $bshunt['name'] ?></h3>
+                <p><i class="fa fa-map-marker fa-lg"></i><b> <?php echo $bshunt['city'] ?></b>, <?php echo $bshunt['adress'] ?></p>
+                <p><i class="fa fa-external-link fa-lg"></i> <a href="<?php echo $bshunt['site'] ?>"><?php echo $bshunt['site'] ?></a></p>
+                <p><i class="fa fa-phone fa-lg"></i> <?php echo $bshunt['tel'] ?></p>
+                <p><?php echo rating_bar($_GET['id']); ?></p>
             </div>
         </div>
     </div>
-
     <div class="block single-barber-description-full">
         <h3>Описание</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p><? echo $bshunt['description'] ?></p>
+    </div>
+    <div class="block single-barber-description-full">
+        <h3>Как найти Барбершоп?</h3>
+        <p><?php echo $bshunt['map'] ?></p>
     </div>
 </article>
+

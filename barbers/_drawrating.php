@@ -21,7 +21,7 @@ if (!$units) {$units = 10;}
 if (!$static) {$static = FALSE;}
 
 // get votes, values, ips for the current rating bar
-$query=mysql_query("SELECT total_votes, total_value, used_ips FROM $rating_dbname.$rating_tableName WHERE id='$id' ")or die(" Error: ".mysql_error());
+$query=mysql_query("SELECT total_votes, total_value, used_ips, full FROM $rating_dbname.$rating_tableName WHERE id='$id' ")or die(" Error: ".mysql_error());
 
 
 // insert the id in the DB if it doesn't exist already
@@ -39,16 +39,16 @@ if ($numbers['total_votes'] < 1) {
 } else {
 	$count=$numbers['total_votes']; //how many votes total
 }
-$current_rating=$numbers['total_value']; //total number of rating added together and stored
-$tense=($count==1) ? "vote" : "votes"; //plural form votes/vote
+$current_rating=$numbers['full']; //total number of rating added together and stored
+$tense=($count==1) ? "проголосовал" : "проголосовали"; //plural form votes/vote
 
 // determine whether the user has voted, so we know how to draw the ul/li
 $voted=mysql_num_rows(mysql_query("SELECT used_ips FROM $rating_dbname.$rating_tableName WHERE used_ips LIKE '%".$ip."%' AND id='".$id."' ")); 
 
 // now draw the rating bar
-$rating_width = @number_format($current_rating/$count,2)*$rating_unitwidth;
-$rating1 = @number_format($current_rating/$count,1);
-$rating2 = @number_format($current_rating/$count,2);
+$rating_width = @number_format($current_rating*$rating_unitwidth);
+$rating1 = @number_format($current_rating,1);
+$rating2 = @number_format($current_rating,1);
 
 
 if ($static == 'static') {
@@ -59,7 +59,7 @@ if ($static == 'static') {
 		$static_rater[] .= '<ul id="unit_ul'.$id.'" class="unit-rating" style="width:'.$rating_unitwidth*$units.'px;">';
 		$static_rater[] .= '<li class="current-rating" style="width:'.$rating_width.'px;">Currently '.$rating2.'/'.$units.'</li>';
 		$static_rater[] .= '</ul>';
-		$static_rater[] .= '<p class="static">'.$id.'. Rating: <strong> '.$rating1.'</strong>/'.$units.' ('.$count.' '.$tense.' cast) <em>This is \'static\'.</em></p>';
+		$static_rater[] .= '<p class="static">'.$id.'. Рейтинг: <strong> '.$rating1.'</strong>/'.$units.' ('.$count.' '.$tense.' cast) <em>This is \'static\'.</em></p>';
 		$static_rater[] .= '</div>';
 		$static_rater[] .= '</div>'."\n\n";
 
@@ -85,7 +85,7 @@ if ($static == 'static') {
       $rater.='  </ul>';
       $rater.='  <p';
       if($voted){ $rater.=' class="voted"'; }
-      $rater.='>'.$id.' Rating: <strong> '.$rating1.'</strong>/'.$units.' ('.$count.' '.$tense.' cast)';
+      $rater.='> Рейтинг: <strong> '.$rating1.' из '.$units.'</strong> ('.$count.' '.$tense.')';
       $rater.='  </p>';
       $rater.='</div>';
       $rater.='</div>';

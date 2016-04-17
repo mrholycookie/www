@@ -1,32 +1,32 @@
 <article>
-		<div class="rate">
+	<div class="rate">
 		<h3>Рейтинг Барбершопов России</h3>
 		<table class="sort" align="center">
 		<thead>
 		<tr>
 		<td class="rate-place">Место</td>
-		<td class="rate-name">Название</td>
+		<td class="rate-name">Барбершоп</td>
 		<td class="rate-town">Город</td>
+        <td class="rate-town">Адрес</td>
 		<td class="rate-stars">Оценка</td>
 		</tr>
 		</thead>
 		<tbody>
         <?php 
         $i=1;
-   
-    $result = mysql_query(" SELECT * FROM barbersshops ORDER by rate DESC");
-
-    while ($row = mysql_fetch_array($result))
-{?>
-		<tr>
-		<td class="rate-place"><?php echo $i++ ?></td>
-		<td class="rate-name"><a href="index.php?view=item&id=<?php echo $row['id'] ?>"><?php echo $row['name'] ?></a></td>
-		<td class="rate-town"><?php echo $row['city'] ?></td>
-		<td class="rate-stars"><?php echo $row['rate'] ?></td>
-		</tr>
-<?php } ?>
-		</tbody>
-	</table>
+        $result = mysql_query(" SELECT * FROM barbersshops ORDER by full DESC ");
+        while ($row = mysql_fetch_array($result))
+        {?>
+    		<tr>
+    		<td class="rate-place"><?php echo $i++ ?></td>
+    		<td class="rate-name"><b><a href="index.php?view=item&id=<?php echo $row['id'] ?>"><?php echo $row['name'] ?></a></b></td>
+    		<td class="rate-town"><?php echo $row['city'] ?></td>
+            <td class="rate-town"><?php echo $row['adress'] ?></td>
+    		<td class="rate-stars"><?php echo rtrim(rtrim($row['full'], '0'), '.'); ?></td>
+    		</tr>
+            <?php } ?>
+	       </tbody>
+	   </table>
 	</div>
 </article>
 <script type="text/javascript">
