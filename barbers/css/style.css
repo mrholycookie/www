@@ -245,9 +245,16 @@ color:#FFFFFF
 	margin-top: 30px;
 	margin-bottom: 10px;
 }
+.single-barber-description-full-comments {
+	width: 500px;
+	margin-top: 20px;
+	float: right;
+}
 .single-barber-description-full {
+	width: 500px;
 	margin-top: 20px;
 	height: auto;
+	
 }
 .single-barber-description-full h3 {
 	text-align: center;
@@ -269,4 +276,6 @@ color:#FFFFFF
 	text-align: center;
 	box-shadow: 0 1px 0 0 #e1e8ed, 0 0 0 1px #e9eef2;
 }
-
+.clearfix {
+  clear: both;
+}

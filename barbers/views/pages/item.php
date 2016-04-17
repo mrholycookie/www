@@ -19,6 +19,12 @@ $bshunt = get_item($id);
             </div>
         </div>
     </div>
+    <div class="single-barber-description-full-comments">
+        <div id="vk_comments"></div>
+        <script type="text/javascript">
+        VK.Widgets.Comments("vk_comments", {limit: 10, width: "490", attach: "audio"});
+        </script>
+    </div>
     <div class="block single-barber-description-full">
         <h3>Описание</h3>
         <p><? echo $bshunt['description'] ?></p>
@@ -26,6 +32,8 @@ $bshunt = get_item($id);
     <div class="block single-barber-description-full">
         <h3>Как найти Барбершоп?</h3>
         <p><?php echo $bshunt['map'] ?></p>
+    </div>
+    <div class="clearfix"></div>
     </div>
 </article>
 

@@ -19,7 +19,10 @@
 	<link rel="shortcut icon" href="favicon.png" />
 	<link rel="stylesheet" href="css/style.css" />
 	<script type="text/javascript" language="javascript" src="js/behavior.js"></script>
-	<script type="text/javascript" language="javascript" src="js/rating.js"></script>
+	<script src="//vk.com/js/api/openapi.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	VK.init({apiId: 5421089, onlyWidgets: true});
+	</script>
 	<link rel="stylesheet" type="text/css" href="css/rating.css" />
 </head>
 <body>
