@@ -64,14 +64,15 @@ header a:hover {
 	text-align: justify;
 }
 .items-topten h3{
+
 	
 }
 .item-topten {
 	margin: 10px 0 10px 0;
-	text-align: center;
+
 }
 .top-main {
-	width: 320px;
+	width: 300px;
 	float: right;
 }
 /*===== slider =====*/
